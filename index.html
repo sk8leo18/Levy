@@ -5,71 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Levy</title>
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="background.mp4" type="video/mp4">
+  </video>
 
-<video class="video-bg" autoplay muted loop playsinline>
-  <source src="background.mp4" type="video/mp4">
-</video>
+  <div class="overlay"></div>
+  <canvas id="particles"></canvas>
 
-<div class="overlay"></div>
-<canvas id="particles"></canvas>
-
-<div class="enter-screen" id="enterScreen">
-  <div class="enter-box">
-    <h1>Levy</h1>
-    <p>clique para entrar</p>
-    <button id="enterBtn">Entrar</button>
-  </div>
-</div>
-
-<main class="hero">
-  <section class="profile">
-
-    <img src="image.jpeg" class="avatar">
-
-    <h1 class="main-name">Levy</h1>
-    <p class="subtitle">just one day</p>
-
-    <div class="social">
-      <a href="https://www.instagram.com/sk8leo12/" target="_blank">Instagram</a>
-      <a href="https://open.spotify.com/user/31kpldkfbangx2esdr4gmxo7saga" target="_blank">Spotify</a>
+  <div class="enter-screen" id="enterScreen">
+    <div class="enter-box">
+      <h1>Levy</h1>
+      <p>clique para entrar</p>
+      <button id="enterBtn" type="button">Entrar</button>
     </div>
+  </div>
 
-    <!-- PLAYER -->
-    <div class="player">
-      <img src="cover.jpg" class="cover">
+  <main class="hero">
+    <section class="profile">
+      <img src="image.jpeg" class="avatar" alt="Foto de Levy">
 
-      <div class="info">
-        <strong>Soft Porn</strong>
-        <span>Puma Blue</span>
+      <h1 class="main-name">Levy</h1>
+      <p class="subtitle">just one day</p>
 
-        <div class="progress-area">
-          <span id="currentTime">0:00</span>
-          <input type="range" id="progress" value="0">
-          <span id="duration">0:00</span>
-        </div>
+      <div class="social">
+        <a href="https://www.instagram.com/sk8leo12/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://open.spotify.com/user/31kpldkfbangx2esdr4gmxo7saga" target="_blank" rel="noopener noreferrer">Spotify</a>
       </div>
 
-      <button id="playBtn">▶</button>
-    </div>
+      <div class="player">
+        <img src="cover.jpg" class="cover" alt="Capa da música">
 
-    <audio id="audio" src="music.mp3"></audio>
+        <div class="info">
+          <div class="track-header">
+            <strong>Soft Porn</strong>
+            <span>Puma Blue</span>
+          </div>
 
-  </section>
-</main>
+          <div class="progress-area">
+            <span id="currentTime">0:00</span>
+            <input type="range" id="progress" value="0" min="0" step="1">
+            <span id="duration">0:00</span>
+          </div>
+        </div>
 
-<script src="script.js"></script>
+        <button id="playBtn" type="button" aria-label="Tocar música">▶</button>
+      </div>
+
+      <audio id="audio" src="music.mp3"></audio>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
